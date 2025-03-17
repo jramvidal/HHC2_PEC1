@@ -1,0 +1,24 @@
+// ==============================
+// TOOLS: FUNCTIONS (ITCSS)
+// ==============================
+
+@use "sass:math"; // Importa el módulo de matemáticas
+
+// 🎯 Convierte píxeles a rem automáticamente
+@function strip-units($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+@function px-to-rem($px, $base: $font-size-base) {
+  @return math.div(strip-units($px), strip-units($base)) * 1rem;
+}
+
+// 🎨 Ajusta el brillo de un color (más claro o más oscuro)
+@function color-shade($color, $percent) {
+  @return mix(white, $color, $percent);
+}
+
+// 📏 Genera espaciado basado en el tamaño base
+@function spacing($factor) {
+  @return $factor * $spacing-md;
+}

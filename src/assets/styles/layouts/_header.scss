@@ -1,0 +1,57 @@
+// ==============================
+// LAYOUT: HEADER (ITCSS + BEM)
+// ==============================
+
+.header {
+  background-color: $color-primary;
+  padding: $spacing-md 0;
+
+  &__container {
+    @include flex-center;
+
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+  }
+
+  &__logo {
+    box-shadow: 10px 10px 20px rgb(0 0 0 / 50%);
+    width: 400px; // Aumenta en mobile y tablet
+    height: auto;
+    transition: transform $transition-speed;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__title {
+    padding-top: $spacing-lg;
+    font-size: px-to-rem(30);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color-light;
+    text-align: center;
+    margin-top: $spacing-sm;
+  }
+}
+
+// 🖥️ Desktop: alinear logo a la izquierda y reducir tamaño
+@include desktop {
+  .header__container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .header__logo {
+    width: 360px;
+  }
+
+  .header__title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

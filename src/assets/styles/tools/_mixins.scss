@@ -1,0 +1,49 @@
+// ==============================
+// TOOLS: MIXINS (ITCSS)
+// ==============================
+
+// 📱 MEDIA QUERIES (MOBILE-FIRST)
+@mixin tablet {
+  @media (min-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
+
+// 🎨 FLEXBOX HELPERS
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// 📏 GRID SYSTEM
+@mixin grid($columns, $gap: $spacing-md) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// ✏️ TEXTO RESPONSIVO
+@mixin fluid-text($min, $max) {
+  font-size: calc(
+    #{$min}px + (#{$max} - $min) * ((100vw - 320px) / (1024 - 320))
+  );
+}

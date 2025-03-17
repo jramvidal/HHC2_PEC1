@@ -1,0 +1,69 @@
+// ==============================
+// BASE: TYPOGRAPHY (ITCSS)
+// ==============================
+
+// 🔤 Tipografía base
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $color-dark;
+}
+
+// 🏷️ Encabezados
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: $color-primary;
+}
+
+h1 {
+  @include fluid-text(24px, 36px);
+}
+
+h2 {
+  @include fluid-text(22px, 32px);
+}
+
+h3 {
+  @include fluid-text(20px, 28px);
+}
+
+h4 {
+  @include fluid-text(18px, 24px);
+}
+
+h5 {
+  @include fluid-text(16px, 22px);
+}
+
+h6 {
+  @include fluid-text(14px, 20px);
+}
+
+// 📄 Párrafos y enlaces
+p {
+  margin-bottom: $spacing-md;
+}
+
+a {
+  color: $color-primary;
+  transition: color $transition-speed;
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+// 🔠 Elementos en negrita y cursiva
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
