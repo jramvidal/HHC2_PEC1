@@ -1,29 +1,22 @@
-// ==============================
-// SETTINGS: VARIABLES (ITCSS)
-// ==============================
-
-// 🎨 PALETA DE COLORES
+// COLOR PALETTE
 $color-primary: #005f73;
 $color-secondary: #b8a474;
 $color-light: #f8f8f8;
 $color-dark: #222;
 
-// 🔠 TIPOGRAFÍA
+// TYPOGRAPHY
 $font-primary: "Arial", sans-serif;
 $font-size-base: 16px;
 
-// 📱 BREAKPOINTS
+// BREAKPOINTS
 $bp-tablet: 768px;
 $bp-desktop: 1024px;
 
-// 📏 ESPACIADO
+// SPACING
 $spacing-sm: 8px;
 $spacing-md: 16px;
 $spacing-lg: 32px;
 $spacing-xl: 64px;
 
-// 🔳 BORDES Y RADIOS
-$border-radius: 8px;
-
-// ⏳ TRANSICIONES
+// TRANSITIONS
 $transition-speed: 0.3s ease-in-out;

@@ -1,61 +1,62 @@
-// ==============================
 // LAYOUT: FOOTER (ITCSS + BEM)
-// ==============================
+
+@use "../settings/variables" as v;
+@use "../tools/index" as m;
 
 .footer {
-  background-color: $color-primary;
-  color: $color-light;
+  background-color: v.$color-primary;
+  color: v.$color-light;
   text-align: center;
-  padding: 0 0 $spacing-lg;
+  padding: 0 0 v.$spacing-lg;
 
   &__container {
-    background-color: $color-light;
-    color: $color-dark;
+    background-color: v.$color-light;
+    color: v.$color-dark;
     max-width: 1200px;
     margin: 0 auto;
-    padding: $spacing-lg;
+    padding: v.$spacing-lg;
   }
 
   &__title {
-    font-size: px-to-rem(26);
+    font-size: m.px-to-rem(26);
     font-weight: bold;
-    color: $color-primary;
+    color: v.$color-primary;
   }
 
   &__icon {
     display: block;
     width: auto;
-    margin: $spacing-md 0;
-    color: $color-secondary;
+    margin: v.$spacing-md 0;
+    color: v.$color-secondary;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: $spacing-lg;
+    margin-top: v.$spacing-lg;
   }
 
   &__section {
-    padding: $spacing-md 0;
+    padding: v.$spacing-md 0;
   }
 
   &__subtitle {
-    font-size: px-to-rem(18);
+    font-size: m.px-to-rem(18);
     font-weight: bold;
-    color: $color-secondary;
-    margin-bottom: $spacing-sm;
+    color: v.$color-secondary;
+    margin-bottom: v.$spacing-sm;
   }
 
   &__bottom {
-    margin-top: $spacing-lg;
-    padding-top: $spacing-md;
-    font-size: px-to-rem(14);
+    margin-top: v.$spacing-lg;
+    padding-top: v.$spacing-md;
+    font-size: m.px-to-rem(14);
   }
 }
 
 // 🖥️ Desktop: mostrar en tres columnas y centrar contenido
-@include desktop {
+@include m.desktop {
   .footer__content {
     flex-direction: row;
     justify-content: space-between;
@@ -64,7 +65,7 @@
 
   .footer__section {
     flex: 1;
-    padding: 0 $spacing-md;
+    padding: 0 v.$spacing-md;
     display: flex;
     flex-direction: column;
     align-items: center;

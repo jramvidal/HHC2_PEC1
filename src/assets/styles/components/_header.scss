@@ -1,25 +1,26 @@
-// ==============================
 // LAYOUT: HEADER (ITCSS + BEM)
-// ==============================
+
+@use "../settings/variables" as v;
+@use "../tools/index" as m;
 
 .header {
-  background-color: $color-primary;
-  padding: $spacing-md 0;
+  background-color: v.$color-primary;
+  padding: v.$spacing-md 0;
 
   &__container {
-    @include flex-center;
+    @include m.flex-center;
 
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 $spacing-md;
+    padding: 0 v.$spacing-md;
   }
 
   &__logo {
     box-shadow: 10px 10px 20px rgb(0 0 0 / 50%);
-    width: 400px; // Aumenta en mobile y tablet
+    width: 460px; // Aumenta en mobile y tablet
     height: auto;
-    transition: transform $transition-speed;
+    transition: transform v.$transition-speed;
 
     &:hover {
       transform: scale(1.1);
@@ -27,18 +28,25 @@
   }
 
   &__title {
-    padding-top: $spacing-lg;
-    font-size: px-to-rem(30);
+    padding-top: v.$spacing-lg;
+    font-size: m.px-to-rem(40);
     font-weight: bold;
     text-transform: uppercase;
-    color: $color-light;
+    color: v.$color-light;
     text-align: center;
-    margin-top: $spacing-sm;
+    margin-top: v.$spacing-sm;
+  }
+}
+
+// Tablet: aumentar tamaño logo
+@include m.tablet {
+  .header__logo {
+    width: 600px; // Tamaño mayor en tablet
   }
 }
 
 // 🖥️ Desktop: alinear logo a la izquierda y reducir tamaño
-@include desktop {
+@include m.desktop {
   .header__container {
     flex-direction: row;
     justify-content: flex-start;
@@ -46,7 +54,7 @@
   }
 
   .header__logo {
-    width: 360px;
+    width: 320px;
   }
 
   .header__title {

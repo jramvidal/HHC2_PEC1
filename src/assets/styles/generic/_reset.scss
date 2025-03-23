@@ -1,6 +1,6 @@
-// ==============================
 // BASE: RESET (ITCSS)
-// ==============================
+
+@use "../settings/variables" as v;
 
 // 🔄 Elimina márgenes y padding por defecto
 * {
@@ -11,10 +11,10 @@
 
 // 🎨 Corrige la tipografía
 html {
-  font-size: $font-size-base;
-  font-family: $font-primary;
-  color: $color-dark;
-  background-color: $color-light;
+  font-size: v.$font-size-base;
+  font-family: v.$font-primary;
+  color: v.$color-dark;
+  background-color: v.$color-light;
 }
 
 // 📌 Quita estilos de listas

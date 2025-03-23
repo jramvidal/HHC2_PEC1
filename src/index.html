@@ -11,13 +11,7 @@
     <link rel="stylesheet" href="./assets/styles/main.scss" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__container">
-        <img src="./assets/images/logo.png" alt="Logo" class="header__logo" />
-        <h1 class="header__title">DEL PRAT AL PLAT</h1>
-      </div>
-    </header>
-
+    <include src="./views/header.html"></include>
     <main class="home">
       <div class="home__info">
         <h2 class="home__subtitle">POTA BLAVA AMB CARXOFES</h2>
@@ -85,31 +79,8 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__container">
-        <h2 class="footer__title">MÉS INFORMACIÓ</h2>
-        <i class="footer__icon fas fa-info fa-4x"></i>
-        <div class="footer__content">
-          <div class="footer__section">
-            <h3 class="footer__subtitle">OFICINA D'INFORMACIÓ</h3>
-            <p>Plaça de la Vila, 1<br />08820 El Prat de Llobregat</p>
-          </div>
-          <div class="footer__section">
-            <h3 class="footer__subtitle">CONTACTE</h3>
-            <p>Tel. 933 790 050<br />Trucar</p>
-          </div>
-          <div class="footer__section">
-            <h3 class="footer__subtitle">HORARI</h3>
-            <p>
-              Dl-Dj: 08:00 - 18:00<br />Dv-Ds: 09:00 - 13:30<br />Diumenges i
-              festius: Tancat
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>Del Prat al plat. CC BY-NC-SA 2.0.</p>
-      </div>
-    </footer>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
   </body>
 </html>

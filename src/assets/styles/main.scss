@@ -3,22 +3,26 @@
  * Do not include SCSS code in this file.
  */
 
-/**
- * Import variables
- */
+// 1. Settings (global variables)
+@use "settings/variables" as v;
 
-@import "settings/variables";
-@import "tools/mixins";
-@import "tools/functions";
-@import "base/reset";
-@import "base/typography";
-@import "layouts/header";
-@import "layouts/footer";
-@import "layouts/home";
-@import "components/buttons";
-@import "components/cards";
-@import "utilities/helpers";
-@import "utilities/animations";
+// 2. Tools (SCSS mixins and functions)
+@use "tools/index" as t;
+
+// 3. Generic (reset)
+@use "generic/reset" as g;
+
+// 4. Elements (typography and HTML elements)
+@use "elements/typography" as e;
+
+// 5. Objects (Layout structures)
+@use "objects/index" as o;
+
+// 6. Components (visual UI parts)
+@use "components/index" as c;
+
+// 7. Utilities (helper utility classes)
+@use "utilities/index" as u;
 
 /**
  * Do NOT include anything else in this file!
