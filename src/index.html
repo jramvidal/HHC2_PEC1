@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
   <head>
     <title>Gastronomía del Baix Llobregat</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FontAwesome icon library -->
     <link
       rel="stylesheet"
       href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css"
     />
+
+    <!-- Main SCSS stylesheet -->
     <link rel="stylesheet" href="./assets/styles/main.scss" />
   </head>
   <body>
+    <!-- Header include (reused across multiple pages if needed) -->
     <include src="./views/header.html"></include>
     <main class="home">
       <div class="home__info">
@@ -79,7 +84,11 @@
         </div>
       </section>
     </main>
+
+    <!-- Footer include (contact info, etc.) -->
     <include src="./views/footer.html"></include>
+
+    <!-- Main JavaScript file (using ES modules) -->
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->
   </body>

@@ -1,13 +1,15 @@
 // TOOLS: FUNCTIONS (ITCSS)
 
-@use "sass:math"; // Imports the math module
+@use "sass:math"; // Sass math module for calculations
 @use "../settings/variables" as v;
 
+// Removes units from a value (e.g. px → number)
+// Useful for consistent mathematical operations
 @function strip-units($value) {
   @return math.div($value, $value * 0 + 1);
 }
 
-// Automatically converts pixels to rem
+// Converts pixel values to rems based on the base font size
 @function px-to-rem($px, $base: v.$font-size-base) {
   @return math.div(strip-units($px), strip-units($base)) * 1rem;
 }

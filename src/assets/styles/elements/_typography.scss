@@ -1,9 +1,9 @@
-// BASE: TYPOGRAPHY (ITCSS)
+// ELEMENTS: TYPOGRAPHY (ITCSS)
 
 @use "../settings/variables" as v;
 @use "../tools/mixins" as m;
 
-// 🔤 Tipografía base
+// Base font styles for the entire site
 body {
   font-family: v.$font-primary;
   font-size: v.$font-size-base;
@@ -11,7 +11,7 @@ body {
   color: v.$color-dark;
 }
 
-// 🏷️ Encabezados
+// Headings (h1–h6)
 h1,
 h2,
 h3,
@@ -22,6 +22,7 @@ h6 {
   color: v.$color-primary;
 }
 
+// Responsive font sizes using fluid typography mixin
 h1 {
   @include m.fluid-text(24px, 36px);
 }
@@ -46,7 +47,7 @@ h6 {
   @include m.fluid-text(14px, 20px);
 }
 
-// 📄 Párrafos y enlaces
+// Paragraphs and links
 p {
   margin-bottom: v.$spacing-md;
 }
@@ -60,7 +61,7 @@ a {
   }
 }
 
-// 🔠 Elementos en negrita y cursiva
+// Inline text formatting
 strong {
   font-weight: bold;
 }
